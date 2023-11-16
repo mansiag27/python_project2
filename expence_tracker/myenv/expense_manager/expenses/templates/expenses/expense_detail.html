@@ -1,0 +1,12 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Expense Detail</h2>
+  <p><strong>Description:  </strong> {{ expense.description }}</p>
+  <p><strong>Amount:  </strong> Rs {{ expense.amount }}</p>
+  <p><strong>Date:  </strong> {{ expense.date }}</p>
+
+  <a href="{% url 'expense_edit' pk=expense.pk %}">Edit</a>
+  <a href="{% url 'expense_list' %}">Back to Expense List</a>
+{% endblock %}
